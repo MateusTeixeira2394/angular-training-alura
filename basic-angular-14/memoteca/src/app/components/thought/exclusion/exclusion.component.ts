@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ROUTE_THOUGHT_LIST } from '../../../../constants/tought/routes.constants';
 import IThought from '../../../../models/interfaces/thought.interface';
 import { ThoughtService } from './../../../../services/thought.service';
 
@@ -44,13 +45,13 @@ export class ExclusionComponent implements OnInit {
     const { id } = this.thought;
 
     if (id) {
-      this.service.deleteOne(id).subscribe(() => this.router.navigate(['/thoughts/list']));
+      this.service.deleteOne(id).subscribe(() => this.router.navigate([ROUTE_THOUGHT_LIST]));
     };
 
   };
 
   public cancel(): void {
-    this.router.navigate(['/thoughts/list']);
+    this.router.navigate([ROUTE_THOUGHT_LIST]);
   }
 
 }

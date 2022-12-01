@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ROUTE_THOUGHT_LIST } from '../../../../constants/tought/routes.constants';
 import IThought from '../../../../models/interfaces/thought.interface';
 import { ThoughtService } from './../../../../services/thought.service';
 
@@ -26,12 +27,12 @@ export class FormComponent implements OnInit {
 
   public create(thought: IThought): void {
     this.service.create(thought).subscribe(() => {
-      this.router.navigate(['thoughts/list']);
+      this.router.navigate([ROUTE_THOUGHT_LIST]);
     });
   };
 
   public cancel(): void {
-    this.router.navigate(['thoughts/list']);
+    this.router.navigate([ROUTE_THOUGHT_LIST]);
   };
 
 }

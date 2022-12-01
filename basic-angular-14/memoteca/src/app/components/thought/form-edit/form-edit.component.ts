@@ -1,3 +1,4 @@
+import { ROUTE_THOUGHT_LIST } from './../../../../constants/tought/routes.constants';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ThoughtService } from './../../../../services/thought.service';
 import { Component, OnInit } from '@angular/core';
@@ -36,11 +37,11 @@ export class FormEditComponent implements OnInit {
   }
 
   public edit(): void {
-    this.service.edit(this.thought).subscribe(() => this.router.navigate(['thoughts/list']));
+    this.service.edit(this.thought).subscribe(() => this.router.navigate([ROUTE_THOUGHT_LIST]));
   }
 
   public cancel(): void {
-    this.router.navigate(['thoughts/list']);
+    this.router.navigate([ROUTE_THOUGHT_LIST]);
   }
 
 }
