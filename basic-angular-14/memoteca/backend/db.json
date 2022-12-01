@@ -1,0 +1,22 @@
+{
+  "thoughts": [
+    {
+      "id": 1,
+      "message": "I like Angular",
+      "author": "Dev Jr.",
+      "model": "modelo1"
+    },
+    {
+      "id": 2,
+      "message": "I prefer React",
+      "author": "Dev Middle",
+      "model": "modelo2"
+    },
+    {
+      "id": 3,
+      "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar tempor tellus, ac dignissim sem placerat porta. Maecenas euismod, velit ultricies mattis commodo, enim enim aliquet turpis, in pulvinar nulla odio ac ipsum. Maecenas nisl lorem, lacinia sed vulputate vitae, posuere et diam. Nulla facilisi. Vivamus sit amet odio ut orci mollis pulvinar vel quis orci. Nulla condimentum metus id aliquam consequat. Integer cursus metus nec lacinia ullamcorper.",
+      "author": "Lero-lero Generator",
+      "model": "modelo3"
+    }
+  ]
+}
