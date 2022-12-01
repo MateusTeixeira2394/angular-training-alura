@@ -1,3 +1,4 @@
+import { ExclusionComponent } from './components/thought/exclusion/exclusion.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormComponent } from './components/thought/form/form.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'thoughts/form',
     component: FormComponent
+  },
+  {
+    path: 'thoughts/delete/:id',
+    component: ExclusionComponent
   }
 ];
 

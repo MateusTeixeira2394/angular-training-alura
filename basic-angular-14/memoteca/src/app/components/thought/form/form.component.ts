@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IThought {
-  id: string;
-  message: string;
-  author: string;
-  model: 'modelo1' | 'modelo2' | 'modelo3'
-}
+import { Router } from '@angular/router';
+import IThought from '../../../../models/interfaces/thought.interface';
+import { ThoughtService } from './../../../../services/thought.service';
 
 @Component({
   selector: 'app-form',
@@ -15,23 +11,27 @@ interface IThought {
 export class FormComponent implements OnInit {
 
   public thought: IThought = {
-    id:'1',
-    author: 'Dev',
-    message: 'Something intersting',
+    author: '',
+    message: '',
     model: 'modelo1'
   }
 
-  constructor() { }
+  constructor(
+    private service: ThoughtService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  public save(): void {
-    alert("Save the thought!");
-  }
+  public create(thought: IThought): void {
+    this.service.create(thought).subscribe(() => {
+      this.router.navigate(['thoughts/list']);
+    });
+  };
 
   public cancel(): void {
-    console.log('cancel')
-  }
+    this.router.navigate(['thoughts/list']);
+  };
 
 }
