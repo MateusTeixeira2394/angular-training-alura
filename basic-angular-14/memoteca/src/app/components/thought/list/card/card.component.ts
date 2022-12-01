@@ -25,7 +25,15 @@ export class CardComponent implements OnInit {
   }
 
   public deleteOne(): void {
-    this.router.navigate(['thoughts/delete/' + this.thought.id]);
+    if(this.thought.id){
+      this.router.navigate(['thoughts/delete/' + this.thought.id]);
+    }
+  }
+
+  public edit(): void {
+    if(this.thought.id){
+      this.router.navigate(['thoughts/edit/' + this.thought.id]);
+    }
   }
 
   public getLengthClass(): string {

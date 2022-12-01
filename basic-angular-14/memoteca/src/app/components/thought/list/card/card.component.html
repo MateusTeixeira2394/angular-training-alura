@@ -4,7 +4,7 @@
   <p class="conteudo">{{thought.message}}</p>
   <p class="autoria"><b>{{thought.author}}</b></p>
 
-  <div class="acoes">
+  <div (click)="edit()" class="acoes">
     <button class="botao-editar">
       <img src="../../../../../assets/images/icone-editar.png" alt="Edit icon">
     </button>

@@ -39,4 +39,12 @@ export class ThoughtService {
     return this.httpClient.delete<IThought>(url);
 
   }
+
+  public edit(thought: IThought): Observable<IThought> {
+
+    const url: string = `${this.API_ADDRESS}/${thought.id}`
+
+    return this.httpClient.put<IThought>(url, thought);
+  }
+
 }

@@ -11,6 +11,7 @@ import { FormComponent } from './components/thought/form/form.component';
 import { CardComponent } from './components/thought/list/card/card.component';
 import { ListComponent } from './components/thought/list/list.component';
 import { ExclusionComponent } from './components/thought/exclusion/exclusion.component';
+import { FormEditComponent } from './components/thought/form-edit/form-edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExclusionComponent } from './components/thought/exclusion/exclusion.com
     FormComponent,
     ListComponent,
     CardComponent,
-    ExclusionComponent
+    ExclusionComponent,
+    FormEditComponent
   ],
   imports: [
     BrowserModule,
