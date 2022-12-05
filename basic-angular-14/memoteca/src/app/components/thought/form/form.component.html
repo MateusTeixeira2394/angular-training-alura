@@ -67,11 +67,7 @@
       </div>
     </div>
     <div class="acoes">
-      <button
-      (click)="create()"
-      [ngClass]="enableButton()"
-      [disabled]="form.valid"
-      >
+      <button (click)="create()" [ngClass]="enableButton()" [disabled]="form.valid">
         Salvar
       </button>
       <button (click)="cancel()" class="botao">Cancelar</button>

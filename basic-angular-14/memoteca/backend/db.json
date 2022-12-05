@@ -2,7 +2,7 @@
   "thoughts": [
     {
       "id": 1,
-      "message": "I like Angular",
+      "message": "I prefer Angular",
       "author": "Dev Junior",
       "model": "modelo1"
     },
@@ -19,10 +19,10 @@
       "model": "modelo3"
     },
     {
+      "id": 4,
       "message": "O que você está fazendo?",
-      "author": "Curioso",
-      "model": "modelo1",
-      "id": 4
+      "author": "Curiosooo",
+      "model": "modelo1"
     }
   ]
 }
