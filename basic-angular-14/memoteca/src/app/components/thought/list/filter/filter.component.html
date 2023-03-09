@@ -1,0 +1,11 @@
+<div class="buscar-pensamentos">
+  <input
+  type="search"
+  class="filtro"
+  placeholder="what do you search?"
+  autofocus
+  [(ngModel)]="filter"
+  (keyup)="filterParent($event)"
+  />
+  <img src="/assets/images/lupa.png" alt="Blue magnifier">
+</div>

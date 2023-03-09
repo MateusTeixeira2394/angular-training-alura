@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import IFilter from '../../../../models/interfaces/filter.interface';
 import IThought from '../../../../models/interfaces/thought.interface';
 import { ThoughtService } from '../../../../services/thought.service';
 
@@ -39,12 +40,12 @@ export class ListComponent implements OnInit {
 
   };
 
-  public filterThoughts(): void {
+  public filterThoughts(param: IFilter): void {
 
     this.page = 1;
     this.thereAreMoreThoughts = true;
 
-    this.service.getAll(this.page, this.filter).subscribe(thoughts => {
+    this.service.getAll(param.page, param.filter).subscribe(thoughts => {
 
       this.thoughts = thoughts;
 

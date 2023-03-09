@@ -1,17 +1,7 @@
 <section class="container">
 
   <header class="header d-flex">
-    <div class="buscar-pensamentos">
-      <input
-      type="search"
-      class="filtro"
-      placeholder="what do you search?"
-      autofocus
-      [(ngModel)]="filter"
-      (keyup)="filterThoughts()"
-      />
-      <img src="/assets/images/lupa.png" alt="Blue magnifier">
-    </div>
+    <app-filter (filterThoughts)="filterThoughts($event)"></app-filter>
     <h2 class="ff-inter">My Mural</h2>
     <button routerLink="/thoughts/form" class="botao">
       Add a new thought

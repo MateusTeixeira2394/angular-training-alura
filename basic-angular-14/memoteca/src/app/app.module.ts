@@ -13,6 +13,7 @@ import { ListComponent } from './components/thought/list/list.component';
 import { ExclusionComponent } from './components/thought/exclusion/exclusion.component';
 import { FormEditComponent } from './components/thought/form-edit/form-edit.component';
 import { LoadMoreButtonComponent } from './components/thought/list/load-more-button/load-more-button.component';
+import { FilterComponent } from './components/thought/list/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoadMoreButtonComponent } from './components/thought/list/load-more-but
     CardComponent,
     ExclusionComponent,
     FormEditComponent,
-    LoadMoreButtonComponent
+    LoadMoreButtonComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

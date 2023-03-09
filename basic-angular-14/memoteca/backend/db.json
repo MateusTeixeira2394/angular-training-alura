@@ -29,6 +29,12 @@
       "author": "Cheddar",
       "model": "modelo1",
       "id": 5
+    },
+    {
+      "message": "Texto do pensamento",
+      "author": "Mateus",
+      "model": "modelo3",
+      "id": 6
     }
   ]
 }
