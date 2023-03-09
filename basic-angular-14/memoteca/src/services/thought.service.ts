@@ -21,12 +21,15 @@ export class ThoughtService {
 
     let params = new HttpParams()
       .set('_page', page)
-      .set('_limit', limit)
-      .set('favorite', favorite);
+      .set('_limit', limit);
 
     if (filter.trim().length > 2) {
       params = params.set('q', filter);
     };
+
+    if (favorite) {
+      params = params.set('favorite', favorite);
+    }
 
     return this.httpClient.get<IThought[]>(API_ADDRESS, { params });
 

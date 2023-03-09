@@ -39,7 +39,7 @@
       "message": "Texto do pensamento",
       "author": "Mateus",
       "model": "modelo3",
-      "favorite": false,
+      "favorite": true,
       "id": 6
     },
     {
@@ -75,7 +75,7 @@
       "author": "Mom",
       "model": "modelo1",
       "id": 11,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 12,

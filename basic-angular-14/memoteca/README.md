@@ -1,6 +1,12 @@
 # Memoteca
 
+This is a app to save music snippets, book quotes, thoughts and your best ideas. You can see the thoughts saved from others people. Check it out!
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+
+## Running the backend
+
+Run `npm run backend:start` to run the project backend. This command must be run first, otherwise the application won't work correctly.
 
 ## Development server
 
