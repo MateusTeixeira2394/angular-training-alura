@@ -16,3 +16,19 @@
   text-align: center;
   padding: 2rem 0 5rem;
 }
+
+.d-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.buscar-pensamentos {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+
+

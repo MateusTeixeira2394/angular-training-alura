@@ -1,10 +1,3 @@
-.d-flex{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-}
-
 .buscar-pensamentos {
   background: #F8F9FE;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
