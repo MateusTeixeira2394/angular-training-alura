@@ -11,11 +11,46 @@ export class ListComponent implements OnInit {
 
   public thoughts: IThought[] = [];
 
+  public thereAreMoreThoughts: boolean = true;
+
+  public filter: string = '';
+
+  private page: number = 0;
+
   constructor(private service: ThoughtService) { }
 
   ngOnInit(): void {
-    this.service.getAll().subscribe(thoughts => this.thoughts = thoughts);
-  }
+    this.loadMoreThoughts();
+  };
+
+  public loadMoreThoughts(): void {
+
+    this.service.getAll(++this.page, this.filter).subscribe(thoughts => {
+
+      this.thoughts.push(...thoughts);
+
+      if (!thoughts.length) {
+
+        this.thereAreMoreThoughts = false;
+
+      }
+
+    });
+
+  };
+
+  public filterThoughts(): void {
+
+    this.page = 1;
+    this.thereAreMoreThoughts = true;
+
+    this.service.getAll(this.page, this.filter).subscribe(thoughts => {
+
+      this.thoughts = thoughts;
+
+    });
+
+  };
 
 
 }

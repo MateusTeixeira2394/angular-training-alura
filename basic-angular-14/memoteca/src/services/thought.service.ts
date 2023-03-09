@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import IThought from '../models/interfaces/thought.interface';
 import { API_ADDRESS } from '../constants/tought/service.constants';
@@ -11,9 +11,19 @@ export class ThoughtService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAll(): Observable<IThought[]> {
+  public getAll(page: number = 1, filter: string = ''): Observable<IThought[]> {
 
-    return this.httpClient.get<IThought[]>(API_ADDRESS);
+    const limit: number = 3;
+
+    let params = new HttpParams()
+      .set('_page', page)
+      .set('_limit', limit);
+
+    if (filter.trim().length > 2) {
+      params = params.set('q', filter);
+    };
+
+    return this.httpClient.get<IThought[]>(API_ADDRESS, { params });
 
   }
 

@@ -22,14 +22,26 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      message: ['', [Validators.required]],
-      author: ['', [Validators.required, Validators.minLength(3)]],
+      message: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        ])
+      ],
+      author: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(3),
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        ])
+      ],
       model: ['modelo1']
     })
   }
 
   public create(): void {
-    console.log(this.form)
     if (this.form.valid) {
       this.service.create(this.form.value).subscribe(() => {
         this.router.navigate([ROUTE_THOUGHT_LIST]);

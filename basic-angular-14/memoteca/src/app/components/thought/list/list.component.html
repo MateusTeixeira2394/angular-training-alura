@@ -1,16 +1,33 @@
 <section class="container">
+
   <header class="header d-flex">
-    <h2 class="ff-inter">Meu Mural</h2>
-    <button routerLink="/thoughts/form" class="botao">Adicionar pensamento</button>
+    <div class="buscar-pensamentos">
+      <input
+      type="search"
+      class="filtro"
+      placeholder="what do you search?"
+      autofocus
+      [(ngModel)]="filter"
+      (keyup)="filterThoughts()"
+      />
+      <img src="/assets/images/lupa.png" alt="Blue magnifier">
+    </div>
+    <h2 class="ff-inter">My Mural</h2>
+    <button routerLink="/thoughts/form" class="botao">
+      Add a new thought
+    </button>
   </header>
+
   <div class="mural" *ngIf="thoughts.length > 0, else withoutThoughts">
     <div *ngFor="let thought of thoughts">
       <app-card [thought]="thought"></app-card>
     </div>
   </div>
+
 </section>
 
-<ng-template #withoutThoughts>
-  <h2 style="text-align: center;margin-top: 10%;">Não há nenhum pensamento adicionado.</h2>
-</ng-template>
+<app-load-more-button [thereAreMoreThoughts]="thereAreMoreThoughts" (click)="loadMoreThoughts()"></app-load-more-button>
 
+<ng-template #withoutThoughts>
+  <h2 style="text-align: center;margin-top: 10%;">There aren't any thoughts added yet.</h2>
+</ng-template>

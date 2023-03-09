@@ -12,6 +12,7 @@ import { CardComponent } from './components/thought/list/card/card.component';
 import { ListComponent } from './components/thought/list/list.component';
 import { ExclusionComponent } from './components/thought/exclusion/exclusion.component';
 import { FormEditComponent } from './components/thought/form-edit/form-edit.component';
+import { LoadMoreButtonComponent } from './components/thought/list/load-more-button/load-more-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormEditComponent } from './components/thought/form-edit/form-edit.comp
     ListComponent,
     CardComponent,
     ExclusionComponent,
-    FormEditComponent
+    FormEditComponent,
+    LoadMoreButtonComponent
   ],
   imports: [
     BrowserModule,

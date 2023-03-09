@@ -27,8 +27,15 @@ export class FormEditComponent implements OnInit {
 
     this.form = this.formBuilder.group({
       id: [],
-      message: ['', [Validators.required]],
-      author: ['', [Validators.required, Validators.minLength(3)]],
+      message: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      author: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(3),
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
       model: ['modelo1']
     });
 

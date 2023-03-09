@@ -1,22 +1,22 @@
 <section class="container criar-pensamentos ff-inter">
   <header class="header">
-    <h2>Adicione um <br>pensamento novo:</h2>
+    <h2>Add a <br>new thought:</h2>
   </header>
   <form [formGroup]="form">
-    <label for="pensamento">Pensamento</label>
-    <input type="textarea" class="input" id="pensamento" formControlName="message" placeholder="Digite o pensamento">
+    <label for="pensamento">Thought</label>
+    <input type="textarea" class="input" id="pensamento" formControlName="message" placeholder="Type the tought">
     <div *ngIf=" form.get('message')?.errors?.['required'] && form.get('message')?.touched" class="mensagem__erro">
-      Campo obrigatório
+      Required field
     </div>
-    <label for="autoria">Autoria ou fonte</label>
-    <input type="text" class="input" id="autoria" formControlName="author" placeholder="Digite a autoria ou fonte">
+    <label for="autoria">Author or source</label>
+    <input type="text" class="input" id="autoria" formControlName="author" placeholder="Type the author or source">
     <div *ngIf=" form.get('author')?.errors?.['required'] && form.get('author')?.touched" class="mensagem__erro">
-      Campo obrigatório
+      Required field
     </div>
     <div *ngIf=" form.get('author')?.errors?.['minlength'] && form.get('author')?.touched" class="mensagem__erro">
-      Precisa ter no mínimo 3 caracteres
+      Required at least 3 characters
     </div>
-    <label for="modelo">Selecione o modelo do card:</label>
+    <label for="modelo">Select the card model:</label>
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
@@ -24,9 +24,9 @@
           <div class="custom-radio">
             <span></span>
           </div>
-          <span>Modelo 1</span>
+          <span>Model 1</span>
         </label>
-        Prévia:
+        Prevew:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/images/modelo1.png" alt="Aspas azuis">
           <p class="conteudo">{{form.get('message')?.value}}</p>
@@ -40,9 +40,9 @@
           <div class="custom-radio">
             <span></span>
           </div>
-          <span>Modelo 2</span>
+          <span>Model 2</span>
         </label>
-        Prévia:
+        Prevew:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/images/modelo2.png" alt="Aspas azul claro">
           <p class="conteudo">{{form.get('message')?.value}}</p>
@@ -56,9 +56,9 @@
           <div class="custom-radio">
             <span></span>
           </div>
-          <span>Modelo 3</span>
+          <span>Model 3</span>
         </label>
-        Prévia:
+        Prevew:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/images/modelo3.png" alt="Aspas verdes">
           <p class="conteudo">{{form.get('message')?.value}}</p>
@@ -67,10 +67,10 @@
       </div>
     </div>
     <div class="acoes">
-      <button (click)="create()" [ngClass]="enableButton()" [disabled]="form.valid">
-        Salvar
+      <button (click)="create()" [ngClass]="enableButton()">
+        Save
       </button>
-      <button (click)="cancel()" class="botao">Cancelar</button>
+      <button (click)="cancel()" class="botao">Cancel</button>
     </div>
   </form>
 </section>
