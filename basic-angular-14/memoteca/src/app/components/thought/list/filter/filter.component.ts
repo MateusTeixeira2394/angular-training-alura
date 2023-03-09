@@ -14,8 +14,6 @@ export class FilterComponent implements OnInit {
   @Input()
   public page: number = 1
 
-  public filter: string = '';
-
   constructor() { }
 
   ngOnInit(): void {

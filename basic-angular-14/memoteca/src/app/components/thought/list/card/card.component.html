@@ -4,8 +4,11 @@
   <p class="conteudo">{{thought.message}}</p>
   <p class="autoria"><b>{{thought.author}}</b></p>
 
-  <div (click)="edit()" class="acoes">
-    <button class="botao-editar">
+  <div  class="acoes">
+    <button (click)="toggleFavorite()" class="botao-favorito">
+      <img src="../../../../../assets/images/icone-favorito-{{getFavoriteIcon()}}.png" alt="Favorite button {{getFavoriteIcon()}}">
+    </button>
+    <button (click)="edit()" class="botao-editar">
       <img src="../../../../../assets/images/icone-editar.png" alt="Edit icon">
     </button>
     <button (click)="deleteOne()" class="botao-excluir">

@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
 
   public filter: string = '';
 
-  private page: number = 0;
+  public page: number = 0;
 
   constructor(private service: ThoughtService) { }
 
@@ -25,7 +25,8 @@ export class ListComponent implements OnInit {
   };
 
   public loadMoreThoughts(): void {
-
+    console.log('page',this.page)
+    console.log('filter',this.filter)
     this.service.getAll(++this.page, this.filter).subscribe(thoughts => {
 
       this.thoughts.push(...thoughts);
@@ -43,6 +44,7 @@ export class ListComponent implements OnInit {
   public filterThoughts(param: IFilter): void {
 
     this.page = 1;
+    this.filter = param.filter;
     this.thereAreMoreThoughts = true;
 
     this.service.getAll(param.page, param.filter).subscribe(thoughts => {

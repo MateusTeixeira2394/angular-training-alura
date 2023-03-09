@@ -25,7 +25,7 @@ export class ThoughtService {
 
     return this.httpClient.get<IThought[]>(API_ADDRESS, { params });
 
-  }
+  };
 
   public getById(id: number): Observable<IThought> {
 
@@ -33,13 +33,13 @@ export class ThoughtService {
 
     return this.httpClient.get<IThought>(url);
 
-  }
+  };
 
   public create(thought: IThought): Observable<IThought> {
 
     return this.httpClient.post<IThought>(API_ADDRESS, thought);
 
-  }
+  };
 
   public deleteOne(id: number): Observable<IThought> {
 
@@ -47,13 +47,21 @@ export class ThoughtService {
 
     return this.httpClient.delete<IThought>(url);
 
-  }
+  };
 
   public edit(thought: IThought): Observable<IThought> {
 
     const url: string = `${API_ADDRESS}/${thought.id}`
 
     return this.httpClient.put<IThought>(url, thought);
-  }
+  };
 
-}
+  public toggleFavorite(thought: IThought): Observable<IThought> {
+
+    thought.favorite = !thought.favorite;
+
+    return this.edit(thought);
+
+  };
+
+};

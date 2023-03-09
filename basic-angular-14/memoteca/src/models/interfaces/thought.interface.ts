@@ -6,5 +6,5 @@ export default interface IThought{
   message: string;
   author: string;
   model: Model;
-
+  favorite: boolean;
 }

@@ -15,7 +15,8 @@ export class ExclusionComponent implements OnInit {
     id: 0,
     message: '',
     author: '',
-    model: 'modelo1'
+    model: 'modelo1',
+    favorite: false
   }
 
   constructor(

@@ -4,37 +4,74 @@
       "id": 1,
       "message": "I prefer Angular",
       "author": "Dev Junior",
-      "model": "modelo1"
+      "model": "modelo1",
+      "favorite": true
     },
     {
       "id": 2,
       "message": "I prefer React",
       "author": "Dev Middle",
-      "model": "modelo2"
+      "model": "modelo2",
+      "favorite": true
     },
     {
       "id": 3,
       "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pulvinar tempor tellus, ac dignissim sem placerat porta. Maecenas euismod, velit ultricies mattis commodo, enim enim aliquet turpis, in pulvinar nulla odio ac ipsum. Maecenas nisl lorem, lacinia sed vulputate vitae, posuere et diam. Nulla facilisi. Vivamus sit amet odio ut orci mollis pulvinar vel quis orci. Nulla condimentum metus id aliquam consequat. Integer cursus metus nec lacinia ullamcorper.",
       "author": "Lero-lero Generator",
-      "model": "modelo3"
+      "model": "modelo3",
+      "favorite": false
     },
     {
       "id": 4,
       "message": "O que você está fazendo?",
       "author": "Curiosooo",
-      "model": "modelo1"
+      "model": "modelo1",
+      "favorite": false
     },
     {
       "message": "Miau",
       "author": "Cheddar",
       "model": "modelo1",
+      "favorite": false,
       "id": 5
     },
     {
       "message": "Texto do pensamento",
       "author": "Mateus",
       "model": "modelo3",
+      "favorite": false,
       "id": 6
+    },
+    {
+      "message": "The mother's heart doesn't deceive itself",
+      "author": "Mom",
+      "model": "modelo1",
+      "id": 7
+    },
+    {
+      "message": "When I die you will appreciate me",
+      "author": "Mom",
+      "model": "modelo2",
+      "id": 8
+    },
+    {
+      "message": "I'll count util 10...",
+      "author": "Mom",
+      "model": "modelo3",
+      "id": 9
+    },
+    {
+      "message": "You haven't done more than your obligation",
+      "author": "Mom",
+      "model": "modelo2",
+      "id": 10,
+      "favorite": true
+    },
+    {
+      "message": "You are not everybody",
+      "author": "Mom",
+      "model": "modelo1",
+      "id": 11
     }
   ]
 }

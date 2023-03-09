@@ -1,8 +1,8 @@
-import { PATH_THOUGHT_DELETE, PATH_THOUGHT_EDIT, ROUTE_THOUGHT_EDIT } from './../../../../../constants/tought/routes.constants';
-import { ROUTE_THOUGHT_DELETE } from './../../../../../constants/tought/routes.constants';
-import { Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import IThought from '../../../../../models/interfaces/thought.interface';
+import { ThoughtService } from '../../../../../services/thought.service';
+import { PATH_THOUGHT_DELETE, PATH_THOUGHT_EDIT } from './../../../../../constants/tought/routes.constants';
 
 @Component({
   selector: 'app-card',
@@ -16,10 +16,12 @@ export class CardComponent implements OnInit {
     id: 0,
     message: '',
     author: '',
-    model: 'modelo3'
+    model: 'modelo3',
+    favorite: false
   };
 
   constructor(
+    private thoughtService: ThoughtService,
     private router: Router
   ) { }
 
@@ -45,6 +47,20 @@ export class CardComponent implements OnInit {
     };
 
     return 'pensamento-p';
+
+  };
+
+  public getFavoriteIcon(): string {
+
+    if (this.thought.favorite) return 'ativo';
+
+    return 'inativo';
+
+  }
+
+  public toggleFavorite(): void {
+
+    this.thoughtService.toggleFavorite(this.thought).subscribe();
 
   };
 
