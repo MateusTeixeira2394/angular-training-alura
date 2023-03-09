@@ -37,7 +37,8 @@ export class FormComponent implements OnInit {
           Validators.pattern(/(.|\s)*\S(.|\s)*/)
         ])
       ],
-      model: ['modelo1']
+      model: ['modelo1'],
+      favorite: [false]
     })
   }
 

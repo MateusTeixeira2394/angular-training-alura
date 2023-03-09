@@ -36,7 +36,8 @@ export class FormEditComponent implements OnInit {
         Validators.minLength(3),
         Validators.pattern(/(.|\s)*\S(.|\s)*/)
       ])],
-      model: ['modelo1']
+      model: ['modelo1'],
+      favorite: [false]
     });
 
     this.getById(parseInt(id));

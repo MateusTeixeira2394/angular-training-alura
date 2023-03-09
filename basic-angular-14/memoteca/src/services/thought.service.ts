@@ -11,13 +11,18 @@ export class ThoughtService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAll(page: number = 1, filter: string = ''): Observable<IThought[]> {
+  public getAll(
+    page: number = 1,
+    filter: string = '',
+    favorite: boolean = false
+  ): Observable<IThought[]> {
 
-    const limit: number = 3;
+    const limit: number = 6;
 
     let params = new HttpParams()
       .set('_page', page)
-      .set('_limit', limit);
+      .set('_limit', limit)
+      .set('favorite', favorite);
 
     if (filter.trim().length > 2) {
       params = params.set('q', filter);
@@ -37,7 +42,7 @@ export class ThoughtService {
 
   public create(thought: IThought): Observable<IThought> {
 
-    return this.httpClient.post<IThought>(API_ADDRESS, thought);
+    return this.httpClient.post<IThought>(API_ADDRESS, { ...thought, favorite: false });
 
   };
 

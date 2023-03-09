@@ -2,17 +2,21 @@
 
   <header class="header d-flex">
 
-    <h2 class="ff-inter">My Mural</h2>
+    <h2 class="ff-inter">{{title}}</h2>
 
-    <button routerLink="/thoughts/form" class="botao">
-      Add a new thought
-    </button>
+    <div class="botoes">
+
+      <button (click)="changeToMyMural()" class="botao">My Mural</button>
+
+      <button (click)="changeToFavorites()" class="botao">My Favorites</button>
+
+      <button routerLink="/thoughts/form" class="botao">
+        New thought
+      </button>
+    </div>
 
     <div class="buscar-pensamentos">
-      <app-filter
-      (filterThoughts)="filterThoughts($event)"
-      [page]="page"
-      ></app-filter>
+      <app-filter (filterThoughts)="filterThoughts($event)" [page]="page"></app-filter>
     </div>
 
   </header>
